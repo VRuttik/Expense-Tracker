@@ -1,26 +1,22 @@
 import React from 'react';
-
 import './Expenses.css';
 import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 
 const Expenses = (props) => {
-
     return (
         <Card className='expenses'> {/* Card is main component */}
-
             {
                 props.item.map(
-                    expense => {
+                    expense => (
                         <ExpenseItem
-                            date={props.date}
-                            title={props.title}
-                            amount={props.amount} />
-                    }
+                            key={expense.id}
+                            date={expense.date}
+                            title={expense.title}
+                            amount={expense.amount} />
+                    )
                 )
             }
-
-            {/* ek-ek hi item aa raha hai to braket likhane ki jarurat nahi. (props.data or title, amount)*/}
         </Card>
     );
 }

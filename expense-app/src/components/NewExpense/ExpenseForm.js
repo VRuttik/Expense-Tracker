@@ -17,7 +17,7 @@ const ExpenseForm = (props) => {
         setEnteredDate(event.target.value);
     };   
 
-    {/* button pe submit karne se data i.e title, amount and date will store in expenseData*/}
+    // button pe submit karne se data i.e title, amount and date will store in expenseData
     const submitHandler = (event) => { 
         
         event.preventDefault();     // form load nahi hoga preventDefault se.
@@ -31,7 +31,7 @@ const ExpenseForm = (props) => {
         props.onSaveExpenseData(expenseData);
 
         console.log(expenseData);
-        setEnteredTitle('');  {/* after saving data filed textfield will clean*/}
+        setEnteredTitle('');  // after saving data filed textfield will clean.
         setEnteredAomunt('');
         setEnteredDate('');
     }
