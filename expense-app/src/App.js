@@ -4,6 +4,7 @@ import Expenses from './components/Expenses/Expenses';
 
 const App = () => {
 
+   {/* array of data*/}
   let expenses = [
     {
       id: 'e1',
@@ -42,7 +43,7 @@ const App = () => {
     <div>
 
       <NewExpense onAddExpense={ addExpenseHandler }/>
-      <Expenses item={expenses}/>
+      <Expenses item={expenses}/> {/*Data expenses mai pass kiya hai, in that component*/}
     </div>
   );
 }

@@ -8,7 +8,7 @@ const NewExpense = (props) => {
     const saveExpenseDataHandler = (enteredExpenseData) => {
 
         const expenseData = {
-            ...enteredExpenseData, // ... spred operator coly all data.
+            ...enteredExpenseData, // ... spred operator copy all data.
             id:Math.random().toString()
         }
 

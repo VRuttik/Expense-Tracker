@@ -17,9 +17,10 @@ const ExpenseForm = (props) => {
         setEnteredDate(event.target.value);
     };   
 
-    const submitHandler = (event) => {
+    {/* button pe submit karne se data i.e title, amount and date will store in expenseData*/}
+    const submitHandler = (event) => { 
         
-        event.preventDefault();
+        event.preventDefault();     // form load nahi hoga preventDefault se.
 
         const expenseData = {
             title: enteredTitle,
@@ -30,7 +31,7 @@ const ExpenseForm = (props) => {
         props.onSaveExpenseData(expenseData);
 
         console.log(expenseData);
-        setEnteredTitle('');
+        setEnteredTitle('');  {/* after saving data filed textfield will clean*/}
         setEnteredAomunt('');
         setEnteredDate('');
     }
@@ -40,7 +41,7 @@ const ExpenseForm = (props) => {
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Title</label>
-                    <input type="text" value={enteredTitle} onChange={titleChangeHandler}/>
+                    <input type="text" value={enteredTitle} onChange={titleChangeHandler}/> {/* the titleChangeHandler function will execute and title will change.*/}
                 </div>
                 <div className="new-expense__control">
                     <label>Amount</label>
