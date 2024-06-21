@@ -5,9 +5,9 @@ import Card from '../UI/Card';
 
 const Expenses = (props) => {
     return (
-        <Card className='expenses'> {/* Card is main component */}
+        <Card className='expenses'> 
             {
-                props.item.map(
+                props.expenses.map(
                     expense => (
                         <ExpenseItem
                             key={expense.id}
